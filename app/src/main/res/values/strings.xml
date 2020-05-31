@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Android_7.2.2</string>
+    <string name="hint_enter_phone_number">Enter a phone number</string>
+    <string name="hint_enter_a_your_message">Enter a your message</string>
+    <string name="btn_call">Call</string>
+    <string name="btn_message">Message</string>
+</resources>
