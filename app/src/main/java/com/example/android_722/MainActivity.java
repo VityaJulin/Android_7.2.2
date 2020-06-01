@@ -99,4 +99,26 @@ public class MainActivity extends AppCompatActivity {
         }
         return false;
     }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        switch (requestCode) {
+            case MY_PERMISSIONS_REQUEST_CALL_PHONE: {
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    callByNumber();
+                } else {
+                    finish();
+                }
+                break;
+            }
+            case MY_PERMISSIONS_REQUEST_SEND_SMS: {
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    sendByNumber();
+                } else {
+                    finish();
+                }
+                break;
+            }
+        }
+    }
 }
