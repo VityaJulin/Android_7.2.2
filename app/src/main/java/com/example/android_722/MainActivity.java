@@ -107,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     callByNumber();
                 } else {
+                    Toast.makeText(this, R.string.toast_no_permission, Toast.LENGTH_SHORT).show();
                     finish();
                 }
                 break;
@@ -115,6 +116,7 @@ public class MainActivity extends AppCompatActivity {
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     sendByNumber();
                 } else {
+                    Toast.makeText(this, R.string.toast_no_permission, Toast.LENGTH_SHORT).show();
                     finish();
                 }
                 break;
